@@ -51,7 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div>
 
   </div>
-  <video width="400" autoplay="true" muted>
+  <video width="400" id="video-principal-mobile" autoplay="true" muted>
     <source src="assets/video/mov_bbb.mp4" type="video/mp4">
   </video>
   <!-- <video class="smartplayer-video smartplayer-video-current" autoplay="" playsinline="" preload="metadata" src="blob:https://blogbebidagelada.online/b360999c-3d79-4e5b-84ac-e70b591f62cb"></video> -->
@@ -398,8 +398,8 @@ Coach de saúde certificado
 </div>
 
 
-<div class="diet-section text-center">
-<div class="diet-container diet-absulate valor-produto" style="display: none;">
+<div class="diet-section text-center valor-produto" style="display: none;">
+<div class="diet-container diet-absulate">
 <div class="gray-box">
 <p>
 <img class="hide-mobile" src="assets/images/check-round.png" alt="">
@@ -465,20 +465,31 @@ video.play();
 <script>
   let sem_som = true;
 
-    jQuery(document).ready(function(){
-        // Window Focusout
-        var _ouibounce = ouibounce(document.getElementById('model-overlay'), {
-            aggressive: true,
-            timer: 0,
-            callback: function() { 
-                setTimeout(function(){
-                   jQuery('.model-box').addClass('show-down');
-                }, 100);
-            }
-        });
-    });
+    // jQuery(document).ready(function(){
+    //     // Window Focusout
+    //     var _ouibounce = ouibounce(document.getElementById('model-overlay'), {
+    //         aggressive: true,
+    //         timer: 0,
+    //         callback: function() { 
+    //             setTimeout(function(){
+    //                jQuery('.model-box').addClass('show-down');
+    //             }, 100);
+    //         }
+    //     });
+    // });
 
-    const video = document.getElementById('video-principal');
+    let video = document.getElementById('video-principal');
+
+    if(document.getElementById('video-principal-mobile')){
+      video = document.getElementById('video-principal-mobile').play();
+    }else{
+      video = document.getElementById('video-principal') 
+    }
+
+    // console.log(document.getElementById('video-principal-mobile'));
+
+    // document.getElementById('video-principal').play();
+
 
     const timeVideo = setInterval(()=>{
 
@@ -504,7 +515,7 @@ video.play();
 
 </script>
 <!-- <script async src="//static.getclicky.com/101340064.js"></script> -->
-<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101340064ns.gif" /></p></noscript>
+<!-- <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101340064ns.gif" /></p></noscript> -->
 <!-- <script type="text/javascript">!function(e,t,n){function a(){var e=t.getElementsByTagName("script")[0],n=t.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://beacon-v2.helpscout.net",e.parentNode.insertBefore(n,e)}if(e.Beacon=n=function(t,n,a){e.Beacon.readyQueue.push({method:t,options:n,data:a})},n.readyQueue=[],"complete"===t.readyState)return a();e.attachEvent?e.attachEvent("onload",a):e.addEventListener("load",a,!1)}(window,document,window.Beacon||function(){});</script> -->
 <!-- <script type="text/javascript">window.Beacon('init', '66e43959-e720-49c9-b6cb-c79d54d23a2e')</script> -->
 </body>
