@@ -51,7 +51,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div>
 
   </div>
-  <video width="400" id="video-principal-mobile" autoplay="true" muted>
+  <video width="400" id="video-principal-mobile">
     <source src="assets/video/mov_bbb.mp4" type="video/mp4">
   </video>
   <!-- <video class="smartplayer-video smartplayer-video-current" autoplay="" playsinline="" preload="metadata" src="blob:https://blogbebidagelada.online/b360999c-3d79-4e5b-84ac-e70b591f62cb"></video> -->
@@ -97,7 +97,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <label>Clique para ouvir</label>
     </div>
   </div>
-  <video width="400" id="video-principal" autoplay="true" muted >
+  <video width="400" id="video-principal">
     <source src="assets/video/mov_bbb.mp4" type="video/mp4">
   </video>
 
@@ -460,8 +460,8 @@ video.play();
 <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-2.1.0.min.js"></script> -->
 <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
 <script src="assets/js/jquery-2.1.0.min.js"></script>
-<script src="assets/js/ouibounce.js"></script>
-<script src="assets/js/custom.js"></script>
+<!-- <script src="assets/js/ouibounce.js"></script>
+<script src="assets/js/custom.js"></script> -->
 <script>
   let sem_som = true;
 
@@ -485,6 +485,9 @@ video.play();
     }else{
       video = document.getElementById('video-principal') 
     }
+
+    video.muted = true;
+    video.play()
 
     // console.log(document.getElementById('video-principal-mobile'));
 
