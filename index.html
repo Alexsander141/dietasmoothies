@@ -48,7 +48,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <body>
 
 <noscript>
-  <video width="400" controls>
+  <div>
+
+  </div>
+  <video width="400" controls >
     <source src="assets/video/mov_bbb.mp4" type="video/mp4">
   </video>
   <!-- <video class="smartplayer-video smartplayer-video-current" autoplay="" playsinline="" preload="metadata" src="blob:https://blogbebidagelada.online/b360999c-3d79-4e5b-84ac-e70b591f62cb"></video> -->
@@ -87,20 +90,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="container">
 <div class="video-wrapper">
 <div class="embed-responsive embed-responsive-16by9">
-
-  <video width="400" controls>
+  <div class="sem-som" id="sem-som">
+    <div class="modal-sem-som">
+     <label>Seu video já começou </label>
+      <img src="assets//images/no-sound_115261.svg" class="img-fluid" alt="Sem som">
+      <label>Clique para ouvir</label>
+    </div>
+  </div>
+  <video width="400" id="video-principal" autoplay="true" muted controls controlsList="nofullscreen nodownload noremoteplayback noplaybackrate noseeking foobar">
     <source src="assets/video/mov_bbb.mp4" type="video/mp4">
   </video>
 
   <!-- <iframe src="https://github.com/embed/ViniciusROReis07/smoothiediet/tree/main/assets/video/final.mpa4" height="0" width="0" style="display:none;visibility:hidden"></iframe> -->
 <!-- <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/94AV_epDjb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 </div>
+
+
 </div>
 </div>
 </div>
 
 
-<div class="hidden-section">
+<div class="hidden-section valor-produto" style="display: none;">
 <div class="diet-section text-center">
 <div class="diet-container">
 <div class="hidden-box-left">
@@ -388,7 +399,7 @@ Coach de saúde certificado
 
 
 <div class="diet-section text-center">
-<div class="diet-container diet-absulate">
+<div class="diet-container diet-absulate valor-produto" style="display: none;">
 <div class="gray-box">
 <p>
 <img class="hide-mobile" src="assets/images/check-round.png" alt="">
@@ -397,7 +408,6 @@ Coach de saúde certificado
 </div>
 <div class="img-with-button">
 <img src="assets/images/bottom-download.png" class="full-on-mobile" alt="">
-
 </div>
 <div class="clearfix"></div>
 <h2>POR POUCO TEMPO!! Apenas <del>R$197,00</del> <span class="green-text">R$97,00</span>
@@ -441,6 +451,11 @@ Coach de saúde certificado
 </div>
 </footer>
 <div class="clearfix"></div>
+<!-- 
+<script>
+ const video =  document.getElementById('video-principal');
+video.play();
+</script> -->
 
 <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/jquery-2.1.0.min.js"></script> -->
 <!-- <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
@@ -448,6 +463,8 @@ Coach de saúde certificado
 <script src="assets/js/ouibounce.js"></script>
 <script src="assets/js/custom.js"></script>
 <script>
+  let sem_som = true;
+
     jQuery(document).ready(function(){
         // Window Focusout
         var _ouibounce = ouibounce(document.getElementById('model-overlay'), {
@@ -460,6 +477,31 @@ Coach de saúde certificado
             }
         });
     });
+
+    const video = document.getElementById('video-principal');
+
+    const timeVideo = setInterval(()=>{
+
+      if(video.currentTime > 1 && sem_som){
+        $("#sem-som").css({"display":"flex"});
+        sem_som = false;
+      }else if(video.currentTime > 9.000 && !sem_som){
+        console.log('video.currentTime',video.currentTime);
+        clearTimeout(timeVideo);
+        $(".valor-produto").css({"display":"block"});
+      }
+
+    },1000)
+
+    $("#sem-som").on("click",()=>{
+      video.muted = false;
+      $("#sem-som").css({"display":"none"})
+    })
+
+//     function mudaParaAmarelo(td) {
+//     td.style.backgroundColor = "#FFFA00";
+// }
+
 </script>
 <!-- <script async src="//static.getclicky.com/101340064.js"></script> -->
 <!-- <noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/101340064ns.gif" /></p></noscript> -->

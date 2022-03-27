@@ -14,6 +14,48 @@ body{
 
 
 }
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+audio::-webkit-media-controls-volume-slider ,
+video::-webkit-media-controls-volume-slider  {
+    display: none;
+}
+/* audio::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-mute-button {
+    display: none;
+} */
+.sem-som{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    z-index: 9999;
+    cursor: pointer;
+	display: none;
+	align-items: center;
+	align-content: center;
+	/* text-align: center;
+	font-size: 50pt;
+	color: #FFF;
+	background-color: rgba(00, 00, 00, 0.5);
+	padding-top: 14%; */
+}
+.modal-sem-som{
+	background-color: #FFF;
+	border: #FFF solid 2px;
+	border-radius: 10px;
+	width: 63%;
+	height: 60%;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 22pt;
+}
+.modal-sem-som img{
+	height: 150px;
+	width: 380px;
+}
 .container{
     width: 1100px;
     padding: 0;
@@ -756,6 +798,14 @@ nav ul li.active span{
 	overflow: hidden;
 	border-radius: 0;
 }
+.video-holder .video-wrapper.show-small-video .modal-sem-som {
+    font-size: 10pt;
+}
+.video-holder .video-wrapper.show-small-video img{
+	height: 50%;
+	width: 50%;
+}
+
 /* --------------------------- THREE BOXES SECTION ---------------------------- */
 .three-boxes{
 	background: #ffffff;
@@ -3132,6 +3182,13 @@ footer.pink-footer{
 	.show-multi-image{
 		display: block;
 	}
+	.modal-sem-som{
+		font-size: 12pt;
+	}
+	.modal-sem-som img{
+		height: 70px;
+		width: 120px;
+	}
 }
 @media only screen and (max-width: 639px) {
 	.thanks-box-holder{
@@ -3145,6 +3202,13 @@ footer.pink-footer{
 	}
 	.offer-section .offer-container{
 		margin-top: 200px;
+	}
+	.modal-sem-som{
+		font-size: 12pt;
+	}
+	.modal-sem-som img{
+		height: 70px;
+		width: 120px;
 	}
 }
 @media only screen and (max-width: 479px) {
@@ -3985,6 +4049,13 @@ footer.pink-footer{
 	.thanks4-box-container .thanks-box-holder{
 		padding-top: 110px;
 	}
+	.modal-sem-som{
+		font-size: 12pt;
+	}
+	.modal-sem-som img{
+		height: 70px;
+		width: 120px;
+	}
 }
 @media only screen and (max-width: 374px) {
 	.top-bar .top-content{
@@ -4221,6 +4292,13 @@ footer.pink-footer{
 	.hide-vv-small-screen{
 		display: none;
 	}
+	.modal-sem-som{
+		font-size: 12pt;
+	}
+	.modal-sem-som img{
+		height: 70px;
+		width: 120px;
+	}
 }
 @media only screen and (max-width: 320px) {
 	.top-bar .top-content {
@@ -4429,5 +4507,12 @@ footer.pink-footer{
 	}
 	.thanks4-box-container .thanks-box-holder{
 		padding-top: 68px;
+	}
+	.modal-sem-som{
+		font-size: 12pt;
+	}
+	.modal-sem-som img{
+		height: 70px;
+		width: 120px;
 	}
 }
