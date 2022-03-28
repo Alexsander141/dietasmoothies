@@ -52,9 +52,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <div>
 
   </div>
-  <video width="400" id="video-principal-mobile" playsinline >
+  <!-- <video width="400" id="video-principal-mobile" playsinline >
     <source src="assets/video/mov_bbb.mp4" type="video/mp4">
-  </video>
+  </video> -->
 </noscript>
 
 
@@ -87,7 +87,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="video-holder text-center">
 <div class="container">
 <div class="video-wrapper">
-<div class="embed-responsive embed-responsive-16by9">
+<!-- <div class="embed-responsive embed-responsive-16by9">
   <div class="sem-som" id="sem-som">
     <div class="modal-sem-som">
      <label>Seu video já começou </label>
@@ -98,7 +98,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <video width="400" id="video-principal" playsinline>
     <source src="assets/video/mov_bbb.mp4" type="video/mp4">
   </video>
-</div>
+</div> -->
 
 
 </div>
@@ -106,7 +106,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 
-<div class="hidden-section valor-produto" style="display: none;">
+<div class="hidden-section valor-produto" >
 <div class="diet-section text-center">
 <div class="diet-container">
 <div class="hidden-box-left">
@@ -393,7 +393,7 @@ Coach de saúde certificado
 </div>
 
 
-<div class="diet-section text-center valor-produto" style="display: none;">
+<div class="diet-section text-center valor-produto" >
 <div class="diet-container diet-absulate">
 <div class="gray-box">
 <p>
@@ -458,7 +458,7 @@ video.play();
 <!-- <script src="assets/js/ouibounce.js"></script>
 <script src="assets/js/custom.js"></script> -->
 <script>
-  let sem_som = true;
+  // let sem_som = true;
 
     // jQuery(document).ready(function(){
     //     // Window Focusout
@@ -473,41 +473,41 @@ video.play();
     //     });
     // });
 
-    let video = document.getElementById('video-principal');
+    // let video = document.getElementById('video-principal');
 
-    if(document.getElementById('video-principal-mobile')){
-      video = document.getElementById('video-principal-mobile').play();
-    }else{
-      video = document.getElementById('video-principal') 
-    }
+    // if(document.getElementById('video-principal-mobile')){
+    //   video = document.getElementById('video-principal-mobile').play();
+    // }else{
+    //   video = document.getElementById('video-principal') 
+    // }
 
-    video.muted = true;
-    video.play()
+    // video.muted = true;
+    // video.play()
 
     // console.log(document.getElementById('video-principal-mobile'));
 
     // document.getElementById('video-principal').play();
 
 
-    const timeVideo = setInterval(()=>{
+    // const timeVideo = setInterval(()=>{
 
-      if(sem_som){
-        $("#sem-som").css({"display":"flex"});
-      }else if(video.currentTime > 9.000 && !sem_som){
-        console.log('video.currentTime',video.currentTime);
-        console.log('sem_som',sem_som);
+    //   if(sem_som){
+    //     $("#sem-som").css({"display":"flex"});
+    //   }else if(video.currentTime > 9.000 && !sem_som){
+    //     console.log('video.currentTime',video.currentTime);
+    //     console.log('sem_som',sem_som);
 
-        clearTimeout(timeVideo);
-        $(".valor-produto").css({"display":"block"});
-      }
+    //     clearTimeout(timeVideo);
+    //     $(".valor-produto").css({"display":"block"});
+    //   }
 
-    },1000)
+    // },1000)
 
-    $("#sem-som").on("click",()=>{
-      video.muted = false;
-      sem_som = false;
-      $("#sem-som").css({"display":"none"})
-    })
+    // $("#sem-som").on("click",()=>{
+    //   video.muted = false;
+    //   sem_som = false;
+    //   $("#sem-som").css({"display":"none"})
+    // })
 
 //     function mudaParaAmarelo(td) {
 //     td.style.backgroundColor = "#FFFA00";

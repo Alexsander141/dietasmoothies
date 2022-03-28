@@ -33,7 +33,7 @@ video::-webkit-media-controls-mute-button {
     position: absolute;
     z-index: 9999;
     cursor: pointer;
-	display: none;
+	display: flex;
 	align-items: center;
 	align-content: center;
 	/* text-align: center;
