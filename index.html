@@ -491,7 +491,7 @@ video.play();
 
     const timeVideo = setInterval(()=>{
 
-      if(video.currentTime > 1 && sem_som){
+      if(sem_som){
         $("#sem-som").css({"display":"flex"});
         sem_som = false;
       }else if(video.currentTime > 9.000 && !sem_som){
