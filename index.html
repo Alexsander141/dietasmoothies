@@ -493,9 +493,10 @@ video.play();
 
       if(sem_som){
         $("#sem-som").css({"display":"flex"});
-        sem_som = false;
       }else if(video.currentTime > 9.000 && !sem_som){
         console.log('video.currentTime',video.currentTime);
+        console.log('sem_som',sem_som);
+
         clearTimeout(timeVideo);
         $(".valor-produto").css({"display":"block"});
       }
