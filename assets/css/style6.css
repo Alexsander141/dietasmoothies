@@ -775,7 +775,7 @@ nav ul li.active span{
 	height: 425px;
     width: 750px;
 	margin: 0 auto;
-	border: 4px solid #ffffff;
+	border: 4px solid #e20045;
 	border-radius: 3px;
 	
 }
@@ -784,7 +784,7 @@ nav ul li.active span{
 	height: 100%;
 }
 .video-holder.video-holder-food .video-wrapper{
-	border-color: #ffffff;
+	border-color: #e20045;
 }
 .video-holder .video-wrapper.show-small-video{
 	position: fixed;
@@ -793,7 +793,7 @@ nav ul li.active span{
 	height: 205px;
 	width: 354px;
 	z-index: 999;
-	border: 7px solid #ffffff;
+	border: 7px solid #e20045;
 	box-shadow: 0 0 30px #000;
 	overflow: hidden;
 	border-radius: 0;
