@@ -3801,6 +3801,7 @@ footer.pink-footer{
 	}
 	.diet-container .hidden-box-right a.main-btn{
 		width: 96%;
+        display: none;
 	}
 	.diet-container a.main-btn img{
 		width: 72px;
