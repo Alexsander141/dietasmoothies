@@ -90,7 +90,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="video-wrapper">
 <div class="embed-responsive embed-responsive-16by9">
     <!-- <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/261920542"></iframe> -->
-    <iframe class="embed-responsive-item" src="https://scripts.converteai.net/b29b731e-f7c3-4d7f-928a-bc199dc4b33b/players/627afcf69378020009f863b1/embed.html"></iframe>
+    <iframe class="embed-responsive-item" id="video" src="https://scripts.converteai.net/b29b731e-f7c3-4d7f-928a-bc199dc4b33b/players/627afcf69378020009f863b1/embed.html"></iframe>
 
   <!-- <div class="sem-som" id="sem-som">
     <div class="modal-sem-som">
@@ -454,7 +454,7 @@ Coach de saúde certificado
 <div class="clearfix"></div>
 <script src="assets/js/jquery-2.1.0.min.js"></script>
 <script>
-  console.log('smartplayer-video',document.getElementsByClassName("smartplayer-video").curretTime);
+  console.log('smartplayer-video',document.getElementById("video"));
     setTimeout(() => {
                 document.getElementById("offer-section").classList.remove("d-none"); 
                 document.getElementById("days").classList.remove("d-none");
