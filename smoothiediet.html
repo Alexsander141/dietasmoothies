@@ -455,15 +455,18 @@ Coach de saúde certificado
 <script src="assets/js/jquery-2.1.0.min.js"></script>
 <script>
     setTimeout(() => {
-        document.getElementById("offer-section").classList.remove("d-none"); 
-        document.getElementById("days").classList.remove("d-none");
-        document.getElementById("diet-section").classList.remove("d-none");
-        document.getElementById("things-section").classList.remove("d-none");
-        document.getElementById("pink-section").classList.remove("d-none");
-        document.getElementById("guide-section").classList.remove("d-none");
-        document.getElementById("lose-section").classList.remove("d-none");
-        document.getElementById("offer-section").classList.remove("d-none");
-        }, 965700); // temporização da Call to Action (em milissegundos)
+      time_video = localStorage.getItem('627afcf69378020009f863b1');
+        if(time_video == '963.520073'){
+                document.getElementById("offer-section").classList.remove("d-none"); 
+                document.getElementById("days").classList.remove("d-none");
+                document.getElementById("diet-section").classList.remove("d-none");
+                document.getElementById("things-section").classList.remove("d-none");
+                document.getElementById("pink-section").classList.remove("d-none");
+                document.getElementById("guide-section").classList.remove("d-none");
+                document.getElementById("lose-section").classList.remove("d-none");
+                document.getElementById("offer-section").classList.remove("d-none");
+         }
+        }, 1000); // temporização da Call to Action (em milissegundos)
 </script>
 
 </body>
