@@ -459,6 +459,8 @@ Coach de saúde certificado
 
   $(document).ready(function() {
     console.log('smartplayer',$('#smartplayer').children('.smartplayer-video').duration);
+    const video = $('#smartplayer').children('.smartplayer-video');
+    console.log('video',video.currentTime);
         setTimeout(() => {
                 document.getElementById("offer-section").classList.remove("d-none"); 
                 document.getElementById("days").classList.remove("d-none");
