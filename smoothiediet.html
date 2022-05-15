@@ -454,7 +454,9 @@ Coach de saúde certificado
 <div class="clearfix"></div>
 <script src="assets/js/jquery-2.1.0.min.js"></script>
 <script>
-  console.log('smartplayer-video',document.getElementById("video"));
+
+  const iframe = document.getElementById("video");
+  console.log(iframe.currentTime)
     setTimeout(() => {
                 document.getElementById("offer-section").classList.remove("d-none"); 
                 document.getElementById("days").classList.remove("d-none");
