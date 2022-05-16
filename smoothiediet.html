@@ -460,6 +460,19 @@ Coach de saúde certificado
   $(document).ready(function() {
     console.log('smartplayer',$('#smartplayer').children('.smartplayer-video').duration);
     const video = $('#smartplayer').children('.smartplayer-video');
+          const exibir_video = localStorage.getItem("exibir-video");
+     
+      if(exibir_video == 'true'){
+                document.getElementById("offer-section").classList.remove("d-none"); 
+                document.getElementById("days").classList.remove("d-none");
+                document.getElementById("diet-section").classList.remove("d-none");
+                document.getElementById("things-section").classList.remove("d-none");
+                document.getElementById("pink-section").classList.remove("d-none");
+                document.getElementById("guide-section").classList.remove("d-none");
+                document.getElementById("lose-section").classList.remove("d-none");
+                document.getElementById("offer-section").classList.remove("d-none");    
+      }
+    
     console.log('video',video.currentTime);
         setTimeout(() => {
                 document.getElementById("offer-section").classList.remove("d-none"); 
@@ -470,6 +483,7 @@ Coach de saúde certificado
                 document.getElementById("guide-section").classList.remove("d-none");
                 document.getElementById("lose-section").classList.remove("d-none");
                 document.getElementById("offer-section").classList.remove("d-none");
+                localStorage.setItem('exibir-video','true');
         }, 964200); // temporização da Call to Action (em milissegundos)
   });
 
