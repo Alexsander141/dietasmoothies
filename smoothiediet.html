@@ -462,15 +462,15 @@ Coach de saúde certificado
     
    const video =  $('video');
        
-    console.log($('video').prop('currentTime'))
+    console.log(video.prop('currentTime'));
+    console.log(video[0].currentTime);
+    console.log('video',video);
     
     $("video").on(    "timeupdate", 
     function(event){
       onTrackedVideoFrame(this.currentTime, this.duration);
     });
     
-    $('video').bind('timeupdate', updateTime);
-
          //const video = $('#smartplayer').children('.smartplayer-video');
           const exibir_video = sessionStorage.getItem("exibir-video");
      
