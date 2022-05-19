@@ -462,16 +462,9 @@ Coach de saúde certificado
     
    const video =  $('video');
        
-    console.log(window.localStorage.getItem("627afcf69378020009f863b1"));
-    console.log('video',video[0]);
-    
-    $("video").on(    "timeupdate", 
-    function(event){
-      onTrackedVideoFrame(this.currentTime, this.duration);
-    });
-    
-         //const video = $('#smartplayer').children('.smartplayer-video');
-          const exibir_video = sessionStorage.getItem("exibir-video");
+    console.log(document.getElementById("smartplayer"));    
+    //const video = $('#smartplayer').children('.smartplayer-video');
+    const exibir_video = sessionStorage.getItem("exibir-video");
      
       if(exibir_video == 'true'){
                 document.getElementById("offer-section").classList.remove("d-none"); 
