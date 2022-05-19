@@ -460,17 +460,17 @@ Coach de saúde certificado
   $(document).ready(function() {
     //console.log('smartplayer',$('#smartplayer').children('.smartplayer-video').duration);
     
-   // const video =  $('video');
+   const video =  $('video');
+       
+    console.log()
     
-
-    const video = document.getElementsByTagName('video').tagName;
-    console.log(video);
-    
-    
-    $(".smartplayer-resume_text").click(function(){
-        $(this).hide();
-      console.log(this);
+    $("video").on(    "timeupdate", 
+    function(event){
+      onTrackedVideoFrame(this.currentTime, this.duration);
     });
+    
+    $('video').bind('timeupdate', updateTime);
+
          //const video = $('#smartplayer').children('.smartplayer-video');
           const exibir_video = sessionStorage.getItem("exibir-video");
      
