@@ -462,7 +462,12 @@ Coach de saúde certificado
     
     const video =  $('video');
     
-    console.log($('video').get(0).currentTime);
+
+     $("video").on(
+        "timeupdate", 
+        function(event){
+        console.log('this.currentTime');
+      });
     
     $(".smartplayer-resume_text").click(function(){
         $(this).hide();
