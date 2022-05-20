@@ -457,7 +457,10 @@ Coach de saúde certificado
   $(document).ready(function() {
     //console.log('smartplayer',$('#smartplayer').children('.smartplayer-video').duration);
     
-   const video =  $('video');
+    $(document).click(function() {
+       console.log($(this));
+    });
+    
        
     const exibir_video = sessionStorage.getItem("exibir-video");
      
