@@ -2395,7 +2395,7 @@ footer.pink-footer{
 		padding-right: 30px;
 	}  
 	.video-holder .video-wrapper{
-		height: auto;
+	        height: 225px;
 	}
 	.video-holder{
 		min-height: 464px;
@@ -3629,7 +3629,7 @@ footer.pink-footer{
 	}
 	.three-boxes h2{
 		margin-bottom: 20px;
-		margin-top: 20px;
+		margin-top: 120px;
 	}
 	.testimonial h2{
 		font-size: 32px;
