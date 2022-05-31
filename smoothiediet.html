@@ -88,38 +88,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="container">
 <div class="video-wrapper">
 
-<div class="embed-responsive embed-responsive-16by9">
-  <div class="sem-som" id="sem-som">
-    <div class="modal-sem-som">
-     <label>Seu video já começou </label>
-      <img src="assets/images/no-sound.png" class="img-fluid" alt="Sem som">
-      <label>Clique para ouvir</label>
-    </div>
-  </div>
-  <div class="pausa" id="pausa">
-    <div class="modal-pausa">
-      <img src="assets//images/play.png" class="img-fluid" alt="Sem som">
-    </div>
-  </div>
-  <div class="video-iniciado" id="video-iniciado">
-    <div class="modal-video-iniciado">
-      <div class="modal-video-iniciado-card" id="assitir-inicio">
-        <img src="assets/images/icons8-retornar-30.png" class="img-fluid" alt="Sem som">
-        <label>Assistir do início?</label>
-      </div>
-      <div class="modal-video-iniciado-card" id="continuar">
-        <img src="assets/images/icons8-reproduzir-30.png" class="img-fluid" alt="Sem som">
-        <label>Continuar assistindo ?</label>
-      </div>
-    </div>
-  </div>
-  <video width="400" id="video-principal" playsinline>
-    <source src="assets/video/original.mp4" type="video/mp4">
-  </video>
-</div>
-<div id="barra" style="width: 100%; height: 10px;margin-top: -7px; background-color: rgba(74,136,226,0.5);">
-  <div id="barra_progresso" style="width: 40%; max-width: 100%; height: 10px; background-color: rgba(74,136,226);"></div>
-</div>
+<script type="text/javascript" id="scr_627afcf69378020009f863b1">var s=document.createElement("script");s.src="https://scripts.converteai.net/b29b731e-f7c3-4d7f-928a-bc199dc4b33b/players/627afcf69378020009f863b1/player.js",s.async=!0,document.head.appendChild(s);</script>
+
 
 </div>
 </div>
@@ -470,108 +440,21 @@ Coach de saúde certificado
 <script src="assets/js/jquery-2.1.0.min.js"></script>
   
 <script>
-  
-    let sem_som = '';
-    let video = '';
-
-    tempo_video_passado = localStorage.getItem('tempo_video');
-
-    const iniciarVideo = () => {
-      sem_som = true;
-      video = document.getElementById('video-principal');
-
-      if(document.getElementById('video-principal-mobile')){
-        video = document.getElementById('video-principal-mobile').play();
-      }else{
-        video = document.getElementById('video-principal') 
-      }
-
-      document.getElementById('video-principal').play();
-
-      video.muted = true;
-      video.play();
-    }
-
-
-    if(tempo_video_passado && tempo_video_passado > 0){
-      $("#sem-som").css({"display":"none"})
-      $('.video-iniciado').css({"display":"flex"});
-    }else{
-      iniciarVideo();
-    }
-
-    $('#assitir-inicio').click(function() {
-      $('.video-iniciado').css({"display":"none"});
-      iniciarVideo();
-    })
-
-    $('#continuar').click(function() {
-      video = document.getElementById('video-principal');
-      video.currentTime = parseInt(tempo_video_passado);
-      sem_som = false;
-      video.play();
-    })
-
-
-    $("#video-principal").click(function(){
-      if(!sem_som){
-        if(!video.paused){
-          video.pause();
-          $("#pausa").css({"display":"flex"})
-        }
-      }
-    });
-
-    $("#pausa").click(function(){
-      video.play();
-      $(".pausa").css({"display":"none"})
-    })
-
-
-    const timeVideo = setInterval(()=>{
-      console.log('video.currentTime',video.currentTime);
-
-      if(sem_som){
-        $("#sem-som").css({"display":"flex"});
-      }else if(video.currentTime >= 962.037913 && !sem_som){
-    
-        clearTimeout(timeVideo);
-        document.getElementById("offer-section").classList.remove("d-none"); 
-        document.getElementById("days").classList.remove("d-none");
-        document.getElementById("diet-section").classList.remove("d-none");
-        document.getElementById("things-section").classList.remove("d-none");
-        document.getElementById("pink-section").classList.remove("d-none");
-        document.getElementById("guide-section").classList.remove("d-none");
-        document.getElementById("lose-section").classList.remove("d-none");
-        document.getElementById("offer-section").classList.remove("d-none");
-      }
-
-      localStorage.setItem('tempo_video',video.currentTime);
-    },1)
-
-    $("#sem-som").click(()=>{
-      video.muted = false;
-      sem_som = false;
-      $("#sem-som").css({"display":"none"})
-    })
-
-    var barraProgresso;
-    var duracaoTotal;
-    var update;
-
-    barraProgresso = document.getElementById("barra_progresso");
-    update = setInterval(atualizaBarra,100500);
-
-    function atualizaBarra(){
-      // console.log('video.currentTime',video.currentTime);
-        if(!video.paused){
-          var resultado = (23*video.currentTime)/100 + 40;
-          console.log('resultado',resultado);
-          barraProgresso.style.width = parseInt(resultado) + 'px';
-        }
-    }
-
-
+ 
+  $(document).ready(function() {
+    //console.log('smartplayer',$('#smartplayer').children('.smartplayer-video').duration);
+      
+        setTimeout(() => {
+                document.getElementById("offer-section").classList.remove("d-none"); 
+                document.getElementById("days").classList.remove("d-none");
+                document.getElementById("diet-section").classList.remove("d-none");
+                document.getElementById("things-section").classList.remove("d-none");
+                document.getElementById("pink-section").classList.remove("d-none");
+                document.getElementById("guide-section").classList.remove("d-none");
+                document.getElementById("lose-section").classList.remove("d-none");
+                document.getElementById("offer-section").classList.remove("d-none");
+        },964620); // temporização da Call to Action (em milissegundos)
+  });
 
 </script>
 
