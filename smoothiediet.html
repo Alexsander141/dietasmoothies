@@ -117,8 +117,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <source src="assets/video/original.mp4" type="video/mp4">
   </video>
 </div>
-<div id="barra" style="width: 390px; height: 10px;margin-top: -7px; background-color: rgba(74,136,226,0.5);">
-  <div id="barra_progresso" style="width: 100px; max-width: 390px; height: 10px; background-color: rgba(74,136,226);"></div>
+<div id="barra" style="width: 100%; height: 10px;margin-top: -7px; background-color: rgba(74,136,226,0.5);">
+  <div id="barra_progresso" style="width: 40%; max-width: 100%; height: 10px; background-color: rgba(74,136,226);"></div>
 </div>
 
 </div>
@@ -565,7 +565,7 @@ Coach de saúde certificado
     function atualizaBarra(){
       // console.log('video.currentTime',video.currentTime);
         if(!video.paused){
-          var resultado = (60*video.currentTime)/23 + 70;
+          var resultado = (23*video.currentTime)/100 + 40;
           console.log('resultado',resultado);
           barraProgresso.style.width = parseInt(resultado) + 'px';
         }
