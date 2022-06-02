@@ -443,6 +443,20 @@ Coach de saúde certificado
  
   $(document).ready(function() {
     //console.log('smartplayer',$('#smartplayer').children('.smartplayer-video').duration);
+    
+      const botao_ativo = sessionStorage.getItem('botao_ativo');
+    
+       if(botao_ativo == 'sim'){
+            ocument.getElementById("offer-section").classList.remove("d-none"); 
+            document.getElementById("days").classList.remove("d-none");
+            document.getElementById("diet-section").classList.remove("d-none");
+            document.getElementById("things-section").classList.remove("d-none");
+            document.getElementById("pink-section").classList.remove("d-none");
+            document.getElementById("guide-section").classList.remove("d-none");
+            document.getElementById("lose-section").classList.remove("d-none");
+            document.getElementById("offer-section").classList.remove("d-none");
+       }
+
       
         setTimeout(() => {
                 document.getElementById("offer-section").classList.remove("d-none"); 
@@ -453,7 +467,8 @@ Coach de saúde certificado
                 document.getElementById("guide-section").classList.remove("d-none");
                 document.getElementById("lose-section").classList.remove("d-none");
                 document.getElementById("offer-section").classList.remove("d-none");
-        },967254); // temporização da Call to Action (em milissegundos)
+                sessionStorage.setItem('botao_ativo', 'sim');
+        },963254); // temporização da Call to Action (em milissegundos)
   });
 
 </script>
