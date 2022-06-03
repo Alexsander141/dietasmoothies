@@ -2395,7 +2395,7 @@ footer.pink-footer{
 		padding-right: 30px;
 	}  
 	.video-holder .video-wrapper{
-	        height: 215px;
+	        height: auto;
 	}
 	.video-holder{
 		min-height: 464px;
