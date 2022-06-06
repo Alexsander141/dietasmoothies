@@ -43,10 +43,7 @@
       property="og:description"
       content="Smoothies para perda de peso rápida, aumento de energia e melhoria da saúde. A maneira deliciosamente fácil de perder peso, mantê-lo e ficar saudável. Resultados garantidos."
     />
-    <link
-      rel="canonical"
-      href="http://dietasmoothies.com/"
-    />
+    <link rel="canonical" href="http://dietasmoothies.com/" />
     <link rel="shortcut icon" href="assets/images/head.png" />
 
     <!-- <script src='//cbtb.clickbank.net/?vendor=smoothdiet'></script> -->
@@ -171,25 +168,41 @@
         display: none;
       }
     </style>
-    
-<!-- Código Meta Pixel -->
-< roteiro >
-  ! função ( f , b , e , v , n , t , s )
-  { if ( f.fbq ) return ; _ _ n = f . fbq = função ( ) { n . callMethod ?
-  n . callMethod . aplicar ( n , argumentos ) : n . fila . push ( argumentos ) } ;
-  if ( ! f . _fbq ) f . _fbq = n ; n . empurrar = n ; n . carregado = ! 0 ; n . versão = '2.0' ;
-  n . fila = [ ] ; t = b . createElement ( e ) ; t . assíncrono = ! 0 ;
-  t . src = v ; s = b . getElementsByTagName ( e ) [ 0 ] ;
-  s . parentNode . insertBefore ( t , s ) } ( window ,  document , 'script' ,
-  'https://connect.facebook.net/en_US/fbevents.js' ) ;
-  fbq ( 'iniciar' ,  '708385920276439' ) ;
-  fbq ( 'track' ,  'AddToCart' ) ;
-</ script >
-< noscript > < img  height =" 1 " width =" 1 " style =" display:none "
-  src =" https://www.facebook.com/tr?id=708385920276439&ev=AddToCart&noscript=1 "
-/> </ noscript >
-<!-- Código de meta pixel final -->
-    
+
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "756736597732388");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=756736597732388&ev=PageView&noscript=1"
+    /></noscript>
   </head>
 
   <script>
@@ -233,14 +246,16 @@
         <div id="primeira">
           <div class="question">
             <h1>Tudo Pronto!</h1>
-            <h2 style= "margin-bottom: 25px; color: #e20045;">Clique no botão abaixo para continuar</h2>
-            <div class="answer" style="margin-bottom: 25px;">
+            <h2 style="margin-bottom: 25px; color: #e20045">
+              Clique no botão abaixo para continuar
+            </h2>
+            <div class="answer" style="margin-bottom: 25px">
               <button class="btn" onclick="redirect()">CONTINUAR</button>
             </div>
           </div>
         </div>
       </div>
-      <p style="text-align: center; font-weight: bold; font-size: 20px;">
+      <p style="text-align: center; font-weight: bold; font-size: 20px">
         © 2022 – Todos os direitos reservados. Este site não faz parte nem é
         endossado pelo Facebook. Facebook é uma marca comercial da Facebook,
         Inc.
